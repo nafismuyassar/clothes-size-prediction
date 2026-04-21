@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  preparation:
+    cmd: py src/prepare.py
+    deps:
+    - path: data/raw/clothes-size-prediction.csv
+      hash: md5
+      md5: ad77f191687efe99f9310a985238f781
+      size: 2114524
+    - path: src/prepare.py
+      hash: md5
+      md5: 3c59d69ec546a6fa0cc14b8d4ca6f407
+      size: 943
+    outs:
+    - path: data/prepared/test.csv
+      hash: md5
+      md5: e036ffb7df739f472d686ac590b8a044
+      size: 445034
+    - path: data/prepared/train.csv
+      hash: md5
+      md5: 9ae132de6004bba1f01582dd150d6039
+      size: 1781333
+    - path: plots/data_distribution.png
+      hash: md5
+      md5: e0b4ce8a767d76bdcb134034c98db732
+      size: 32199

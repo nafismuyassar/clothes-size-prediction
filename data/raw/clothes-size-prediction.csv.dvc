@@ -1,0 +1,5 @@
+outs:
+- md5: ad77f191687efe99f9310a985238f781
+  size: 2114524
+  hash: md5
+  path: clothes-size-prediction.csv

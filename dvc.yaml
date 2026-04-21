@@ -1,0 +1,10 @@
+stages:
+  preparation:
+    cmd: py src/prepare.py
+    deps:
+    - src/prepare.py
+    - data/raw/clothes-size-prediction.csv
+    outs:
+    - data/prepared/train.csv
+    - data/prepared/test.csv
+    - plots/data_distribution.png
