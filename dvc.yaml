@@ -8,3 +8,19 @@ stages:
     - data/prepared/train.csv
     - data/prepared/test.csv
     - plots/data_distribution.png
+  training:
+    cmd: py src/train.py
+    deps:
+    - data/prepared/train.csv
+    - src/train.py
+    outs:
+    - models/model.pkl
+  evaluate:
+    cmd: py src/evaluate.py
+    deps:
+    - data/prepared/test.csv
+    - models/label_encoder.pkl
+    - models/model.pkl
+    - src/evaluate.py
+    outs:
+    - metrics.json
